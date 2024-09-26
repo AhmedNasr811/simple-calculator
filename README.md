@@ -153,4 +153,37 @@ simple-calculator/
     Docker Compose: Simplified multi-container management.
     
     Nginx: (Optional) Configured as a reverse proxy for better performance and security.
-    
+
+
+   ### Deployment with K8S 
+
+Start Minikube:
+
+````bash
+minikube start
+
+````
+
+Apply Kubernetes manifests:
+
+````bash
+
+kubectl apply -f namespace.yaml
+kubectl apply -f role.yaml
+kubectl apply -f rolebinding.yaml
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+````
+
+Port forward to access the application:
+
+````bash
+
+kubectl port-forward --namespace simple-calc-namespace svc/simple-calc-service 8080:80
+
+````
+
+Open your browser and navigate to:
+
+http://localhost:8080
