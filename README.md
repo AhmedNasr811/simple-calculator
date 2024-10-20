@@ -124,7 +124,7 @@ Access the Application:
    
 3. **Run Docker Container**
    ````bash
-      docker run -p 3000:3000 --name simple-calculator-container ahmednasr811/simple-calculator
+      docker run -d -p 3000:3000 ahmednasr811/simple-calculator
    ````
   
 application will be accessible at http://127.0.0.1:5000
