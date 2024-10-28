@@ -128,7 +128,7 @@ Access the Application:
       docker run -d -p 3000:3000 ahmednasr811/simple-calculator
    ````
   
-application will be accessible at http://127.0.0.1:5000
+application will be accessible at http://127.0.0.1:3000
 
 ### Folder Structure
 ```perl
