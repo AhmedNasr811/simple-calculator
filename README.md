@@ -98,6 +98,7 @@ Start the Application:
 
 ```bash
 docker compose up
+sudo aa-remove-unknown
 ```
 Access the Application:
 ### Run the application with an nginx webserver 
