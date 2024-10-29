@@ -1,0 +1,8 @@
+services:
+  simple-calculator:
+    build: .
+    ports:
+      - "8080:3000" # Map the container port 3000 to your machine's port 8080
+    volumes:
+      - .:/usr/src/app
+    restart: always

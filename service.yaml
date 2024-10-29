@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-calc-service
+  namespace: simple-calc-namespace
+spec:
+  selector:
+    app: simple-calc
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: ClusterIP

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-calc-deployment
+  namespace: simple-calc-namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-calc
+  template:
+    metadata:
+      labels:
+        app: simple-calc
+    spec:
+      containers:
+        - name: simple-calc-container
+          image: ahmednasr811/simple-calculator:latest  # Updated image
+          ports:
+            - containerPort: 8080
